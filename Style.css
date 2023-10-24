@@ -2,12 +2,11 @@
     min-height: 100vh;
   }
   
-
 h5 {position: relative;font-family: Helvetica, Arial;}
 
 h1 {
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 h6 {
@@ -26,26 +25,25 @@ h6 {
     border-bottom-right-radius:20px;  
 }
 
+#carouselExample {
+    width: 100%;
+    height: 820px;
+    overflow: hidden;
+}
+
 #footer {
     text-align: center;
     width: 100%;
     height: 6px;
     letter-spacing: 1px;
+    bottom: 0;
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color: #1f1e1e;
+    color: #fff;
+    padding: 20px;
 }
-
-.my-footer {
-    position: fixed;
-    justify-content: center;
-    letter-spacing: 1px;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(165, 141, 25, 1);
-    text-align: center;
-  }
-  
 
 #pantalla {
     background-color: #19367578;
@@ -61,4 +59,54 @@ main {
     padding: 0;
     height: 100%;
     width: auto;
+}
+
+h2 {
+    text-align: center;
+}
+  
+details {
+    width: 75%;
+    min-height: 5px;
+    max-width: 850px;
+    padding: 45px 70px 45px 45px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 22px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+  
+details + details {
+    margin-top: 20px;
+}
+  
+details[open] {
+    min-height: 50px;
+    background-color: #f6f7f8;
+    box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+}
+  
+details p {
+    color: #96999d;
+    font-weight: 300;
+}
+  
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+  
+.control-icon-close {
+    display: none;
+}
+  
+details[open] .control-icon-close {
+    display: initial;
+    transition: .3s ease;
 }
